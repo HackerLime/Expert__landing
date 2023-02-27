@@ -16,71 +16,352 @@
 	font-display: swap;
 }
 
-@import 'reset.scss';
+@import "_reset";
 
 .wrapper {
 	min-height: 100vh;
 	overflow: hidden;
+	
 }
 .container{
 	max-width: 1410px;
 	margin: 0px auto;
 }
-
 .first {
-	background-image: url(../img/first/bg1.svg);
-
+	padding: 27.5px 0 39px 0;
+	background: url('../img/first/bg2.png')0 0/cover no-repeat;
 		&__menu {
+			display: flex;
+			justify-content: space-between;
+			margin: 0 0 147.5px 0;
 		}
 
 		&__logo {
 		}
-
+		
+		&__menu-rpt{
+			display: flex;
+		}
 		&__numbers {
+			display: flex;
 		}
 
 		&__number {
+			font-family: "mulish";
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 120%;
+			color: #fff;
+		}
+		&__number:last-child{
+			margin-left:48px;
+		}
+		&__burger {
+			display: block;
+			position: relative;
+			height: 18px;
+			width: 24px;
+			margin-left: 63px;
+			
+		}
+		&__burger span{
+			position: absolute;
+			background-color: #fff;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			top: 8px;
+			border-radius: 25px;
+		}
+		&__burger:before{
+			content: '';
+			position: absolute;
+			top:0;
+			left: 0;
+			background-color: #fff;
+			width: 100%;
+			height: 2px;
+			border-radius: 25px;
+			
+		}
+		&__burger:after{
+			content: '';
+			position: absolute;
+			bottom:0;
+			left: 12px;
+			background-color: #fff;
+			width: 50%;
+			height: 2px;
+			border-radius: 25px;
+			
 		}
 
-		&__burger {
-		}
+	
 
 		&__about {
+			margin: 0 0 48px 0;
 		}
-asdqwerewretretytrytuytutuiyuiyui
+
 		&__title {
+			font-family: 'AGPro-MED-Ext';
+			font-weight: 500;
+			font-size: 64px;
+			line-height: 120%;
+			color: #F7F7F8;
+			text-transform: uppercase;
+			text-align: center;
+			margin: 0 0 24px 0;
+		}
+		&__title span{
+			color: #FF1616;
 		}
 
 		&__subtitle {
+			font-family: "mulish";
+			font-weight: 400;
+			font-size: 17px;
+			line-height: 140%;
+			color: #EEEFF0;
+			text-align: center;
 		}
 
 		&__callform {
+			display: flex;
+			justify-content: center;
+			margin: 0 0 140px 0;
 		}
 
 		&__inputname {
+			width: 320px;
+			height: 64px;
+			background-color: #EEEFF0;
+			border: 1px solid #CACAD0;
+			border-radius: 32px;
+			margin: 0 16px 0 0;
+			padding: 21px 0 21px 24px;
+			font-family: 'Mulish';
+			font-weight: 400;
+			font-size: 17px;
+			line-height: 130%;
+		
+		}
+		&__inputname::placeholder{
+			color: #8A8A99;
+	
 		}
 
 		&__inputphone {
+			width: 320px;
+			height: 64px;
+			background-color: #EEEFF0;
+			border: 1px solid #CACAD0;
+			border-radius: 32px;
+			padding: 21px 0 21px 24px;
+			margin: 0 16px 0 0;
+			font-family: 'Mulish';
+			font-weight: 400;
+			font-size: 17px;
+			line-height: 130%;
+		}
+		&__inputphone::placeholder{
+			
 		}
 
 		&__callformbutton {
+			width: 204px;
+			height: 64px;
+			background: #FF1616;
+			border-radius: 32px;
+			font-family: 'Mulish';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 17px;
+			line-height: 130%;
+			color: #F7F7F8;
 		}
 
 		&__footer {
+			justify-content: space-between;
+			font-family: 'Mulish';
+			color: #F7F7F8;
+			font-size: 17px;
+			line-height: 140%;
+			display: flex;
 		}
 
 		&__clockandlocation {
+			display: flex;
 		}
 
 		&__location {
+			display: flex;
+			align-items: center;
+			background: url('../img/first/location.png') left no-repeat;
+			margin: 0 52px 0 0;
+			padding-left: 48px;
 		}
+	
 
 		&__clock {
+			display: flex;
+			align-items: center;
+			position: relative;
+			background: url('../img/first/Clock.png')  left no-repeat;
+			padding: 0 0 0 52px;
 		}
+		
+
 
 		&__social {
+			display: flex;
+			justify-content: space-between;
+			flex: 0 1 261.5px;
 		}
 
 		&__social-icon {
 		}
 }
+.affirst {
+	background-color: #051326;
+	padding: 24px 0;
+	display: flex;
+	justify-content: space-between;
+
+	&__text {
+		font-family: 'AGPro-MED-Ext';
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 140%;
+		color: #F7F7F8;
+		text-transform: uppercase;
+		margin: 0 24px 0 0;
+		position: relative;
+		padding-left: 32px;
+		flex: 0 0 auto;
+	}
+	&__text span{
+		position: absolute;
+		background-color:#F7F7F8;
+		width: 8px;
+		height: 8px;
+		top:13px;
+		left: 0;
+		border-radius: 50%;
+	}
+	&__text:last-child{
+		margin: 0;
+	}
+}
+
+.why {
+	padding: 148px 0 178px 0;
+	background-color: #F7F7F8;
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 64px 0;
+	}
+
+	&__title {
+		flex: 0 1 auto;
+		position:relative;
+		font-family: 'AGPro-MED-Ext';
+		font-weight: 500;
+		font-size: 48px;
+		line-height: 130%;
+		color: #051326;
+		text-transform: uppercase;
+
+
+
+	}
+	&__title span::after{
+		content: '';
+		position: absolute;
+		width: 54px;
+		height: 52px;
+		background: url('../img/why/Vector.png');
+		bottom: 32px;
+		margin-left: -20px;
+	}
+	&__red{
+		color: #FF1616;
+
+	}
+
+
+	
+
+	&__subtitle {
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 140%;
+		color: #8A8A99;
+		margin: 0 0 64px 0;
+
+	}
+
+	&__calmness {
+		font-family: 'AGPro-MED-Ext';
+		font-size: 18px;
+		line-height: 140%;
+		color: #FF1616;
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__pic {
+	}
+
+	&__items {
+		display: flex;
+		align-items: center;
+	
+	}
+	&__items-column{
+		flex: 0 1 50%;
+		
+		
+	}
+	&__items-column:last-child{
+		margin: 0;
+	}
+
+	&__item {
+		border-left: 2px #FF1616 solid;
+		margin: 0 0 48px 0;
+		padding-left:32px ;
+		max-width: 318px;
+		height: 120px;
+		
+	}
+	&__item:last-child{
+		margin: 0;
+	}
+
+	&__item-title {
+		font-family: 'AGPro-MED-Ext';
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 130%;
+		text-transform: uppercase;
+		color: #051326;
+		margin: 0 0 8px 0;
+	}
+
+	&__item-text {
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 140%;
+		color: #8A8A99;
+		opacity: 0.8;
+		flex: 0 0 286px;
+	}
+
+}
+
+
