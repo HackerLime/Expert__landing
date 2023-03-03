@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "AGPro-REGULAR-Ext";
+  font-family: "Akzidenz-Grotesk Pro";
   src: url("../fonts/AkzidenzGroteskPro-Ext.woff2") format("woff2"), url("../fonts/AkzidenzGroteskPro-Ext.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "AGPro-MED-Ext";
+  font-family: "Akzidenz-Grotesk Pro";
   src: url("../fonts/AkzidenzGroteskPro-MdEx.woff2") format("woff2"), url("../fonts/AkzidenzGroteskPro-MdEx.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -187,7 +187,7 @@ legend {
   margin: 0 0 48px 0;
 }
 .first__title {
-  font-family: "AGPro-MED-Ext";
+  font-family: "Akzidenz-Grotesk Pro";
   font-weight: 500;
   font-size: 64px;
   line-height: 120%;
@@ -293,7 +293,7 @@ legend {
   justify-content: space-between;
 }
 .affirst__text {
-  font-family: "AGPro-MED-Ext";
+  font-family: "Akzidenz-Grotesk Pro";
   font-weight: 500;
   font-size: 24px;
   line-height: 140%;
@@ -329,7 +329,7 @@ legend {
 .why__title {
   flex: 0 1 auto;
   position: relative;
-  font-family: "AGPro-MED-Ext";
+  font-family: "Akzidenz-Grotesk Pro";
   font-weight: 500;
   font-size: 48px;
   line-height: 130%;
@@ -341,11 +341,11 @@ legend {
   position: absolute;
   width: 54px;
   height: 52px;
-  background: url("../img/why/Vector.png");
+  background: url("../img/why/choseusUnion.svg");
   bottom: 32px;
   margin-left: -20px;
 }
-.why__red {
+.why__title-red {
   color: #FF1616;
 }
 .why__subtitle {
@@ -356,7 +356,7 @@ legend {
   margin: 0 0 64px 0;
 }
 .why__calmness {
-  font-family: "AGPro-MED-Ext";
+  font-family: "Akzidenz-Grotesk Pro";
   font-size: 18px;
   line-height: 140%;
   color: #FF1616;
@@ -364,6 +364,32 @@ legend {
 .why__body {
   display: flex;
   justify-content: space-between;
+}
+.why__pic {
+  background: url("../img/why/meter.svg") no-repeat;
+  height: 507px;
+  width: 497px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.why__pic-text-title {
+  font-family: "Akzidenz-Grotesk Pro";
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+  color: #051326;
+  margin: 0 0 8px 0;
+}
+.why__pic-text-subtitle {
+  font-family: "Mulish";
+  font-size: 17px;
+  line-height: 140%;
+  text-align: center;
+  color: #8A8A99;
+  opacity: 0.8;
+  max-width: 325px;
 }
 .why__items {
   display: flex;
@@ -386,7 +412,7 @@ legend {
   margin: 0;
 }
 .why__item-title {
-  font-family: "AGPro-MED-Ext";
+  font-family: "Akzidenz-Grotesk Pro";
   font-weight: 500;
   font-size: 36px;
   line-height: 130%;
@@ -401,4 +427,168 @@ legend {
   color: #8A8A99;
   opacity: 0.8;
   flex: 0 0 286px;
+}
+
+.inspection {
+  padding: 140px 0;
+}
+.inspection__row {
+  display: flex;
+  margin: 0 0 64px 0;
+}
+.inspection__title {
+  font-family: "Akzidenz-Grotesk Pro";
+  color: #051326;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+.inspection__title span {
+  color: #FF1616;
+  position: relative;
+}
+.inspection__title span::after {
+  position: absolute;
+  content: "";
+  width: 306px;
+  height: 29.78px;
+  background: url("../img/inspection/choseusvectorarrow.svg");
+  top: 5px;
+  left: 113%;
+}
+.inspection__caretext {
+  font-family: "Akzidenz-Grotesk Pro";
+  font-size: 18px;
+  line-height: 140%;
+  color: #FF1616;
+  min-width: 244px;
+}
+.inspection__about {
+  font-family: "Mulish";
+  font-size: 17px;
+  line-height: 140%;
+  color: #8A8A99;
+  max-width: 818px;
+}
+.inspection__body {
+  font-family: "Mulish";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inspection__name {
+  font-family: "Mulish";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: left;
+  color: #8A8A99;
+  margin: 0 0 41px 0;
+  position: relative;
+}
+.inspection__name:last-child {
+  margin: 0;
+}
+.inspection__slide-container {
+  height: 800px;
+  width: 697px;
+}
+.inspection__items {
+  height: 700px;
+}
+.inspection__item {
+  background: #F7F7F8;
+  border: 1px solid #CACAD0;
+  box-shadow: 0px 24px 48px 2px rgba(39, 47, 58, 0.05);
+  border-radius: 32px;
+  padding: 100px 52.69px 100px 0;
+}
+.inspection__item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 48px 0;
+}
+.inspection__item-title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 120%;
+  padding-left: 48px;
+  max-width: 457px;
+}
+.inspection__item-textbody {
+  font-size: 17px;
+  line-height: 140%;
+  color: #051326;
+  padding-left: 48px;
+}
+.inspection__item-textbody p {
+  background: url("../img/inspection/checkicon.svg") 0 0 no-repeat;
+  padding-left: 48px;
+  margin: 0 0 16px 0;
+}
+.inspection__item-textbody p:last-child {
+  margin: 0;
+}
+.inspection__buttons {
+  display: flex;
+  flex-direction: column;
+}
+.inspection__button-up {
+  margin: 0 0 5px 0;
+}
+.inspection__button-up:hover svg rect {
+  stroke: #FF1616;
+  opacity: 1;
+  stroke-width: 2;
+}
+.inspection__button-up:hover svg path {
+  stroke: #FF1616;
+}
+.inspection__button-up:active svg rect {
+  fill: #FF1616;
+}
+.inspection__button-up:active svg path {
+  stroke: #F7F7F8;
+}
+.inspection__button-up:visited svg rect {
+  stroke: #8A8A99;
+}
+.inspection__button-up:visited svg path {
+  stroke: #8A8A99;
+}
+.inspection__button-down:hover svg rect {
+  stroke: #FF1616;
+  opacity: 1;
+  stroke-width: 2;
+}
+.inspection__button-down:hover svg path {
+  stroke: #FF1616;
+}
+.inspection__button-down:active svg rect {
+  fill: #FF1616;
+}
+.inspection__button-down:active svg path {
+  stroke: #F7F7F8;
+}
+.inspection__button-down:visited svg rect {
+  stroke: #8A8A99;
+}
+.inspection__button-down:visited svg path {
+  stroke: #8A8A99;
+}
+
+.active span::before {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 2px;
+  background-color: #051326;
+  top: 14px;
+  left: -50px;
+}
+
+.active {
+  color: #051326;
 }

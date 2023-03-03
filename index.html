@@ -11,6 +11,7 @@
 		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Mulish:wght@400;500;600&display=swap"
 		rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 	<title>Expert__Landing</title>
 </head>
 
@@ -67,7 +68,7 @@
 		<div class="why">
 			<div class="container">
 				<div class="why__head">
-					<h2 class="why__title">Почему выбирают <span class="why__red">нас</span></span>
+					<h2 class="why__title">Почему выбирают <span class="why__title-red">нас</span>
 					</h2>
 					<div class="why__calmness">С нами спокойно</div>
 				</div>
@@ -75,7 +76,11 @@
 					машин.<br> Экономим время, нервы и деньги наших клиентов.</div>
 				<div class="why__body">
 					<div class="why__pic">
-						<img src="img/why/Picture.png" alt="">
+						<div class="why__pic-text">
+							<div class="why__pic-text-title">у более 55%</div>
+							<div class="why__pic-text-subtitle">проверяемых авто обнаруживаются <span
+									class="why__title-red">неявные</span> неисправности</div>
+						</div>
 					</div>
 					<div class="why__items">
 						<div class="why__items-column">
@@ -103,8 +108,196 @@
 				</div>
 			</div>
 		</div>
+		<div class="inspection">
+			<div class="container">
+				<div class="inspection__row">
+					<h2 class="inspection__title">Осмотр авто перед покупкой: <span>что проверяем</span></h2>
+					<div class="inspection__caretext">Позаботимся обо всём</div>
+				</div>
+				<div class="inspection__about">Проверка авто перед покупкой необходима для выявления возможных скрытых
+					неисправностей. Часто продавцы сами не знают всё о техническом состоянии машины. Мы проведём детальный
+					осмотр планируемого к покупке автомобиля и предоставим данные о его состоянии по следующему перечню:
+				</div>
+				<div class="inspection__body">
+					<div class="inspection__names">
+						<div class="inspection__name"><span>Кузов</span></div>
+						<div class="inspection__name"><span>Двигатель</span></div>
+						<div class="inspection__name"><span>Коробка передач</span></div>
+						<div class="inspection__name"><span>Электроника и оборудование</span></div>
+						<div class="inspection__name"><span>Компьютерная диагностика</span></div>
+						<div class="inspection__name"><span>Подушки безопасности</span></div>
+						<div class="inspection__name"><span>Подвеска</span></div>
+						<div class="inspection__name"><span>Документы</span></div>
+						<div class="inspection__name"><span>Пробег</span></div>
+					</div>
+					<div class="inspection__slide-container swiper">
+						<div class="inspection__items swiper-wrapper">
+							<div class="inspection__item swiper-slide">
+								<div class="inspection__item-body">
+									<div class="inspection__item-row">
+										<div class="inspection__item-title">Кузов</div>
+										<div class="inspection__item-icon">
+											<img src="img/inspection/carbody.svg" alt="">
+										</div>
+									</div>
+									<div class="inspection__item-textbody">
+										<p>Экспертиза лакокрасочных материалов и покрытия с помощью толщиномера для определения
+											был ли автомобиль в ДТП и насколько авария была серьёзной.</p>
+										<p>Выявление нарушений геометрии кузова, наличия ржавчины, сколов, царапин и вмятин.</p>
+										<p>Комплексный осмотр всех параметров кузова, швов и зазоров, проверка на оригинальность.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="inspection__item swiper-slide">
+								<div class="inspection__item-body">
+									<div class="inspection__item-row">
+										<div class="inspection__item-title">Двигатель</div>
+										<div class="inspection__item-icon">
+											<img src="img/inspection/engine.svg" alt="">
+										</div>
+									</div>
+									<div class="inspection__item-textbody">
+										<p>Осмотр на предмет следов течи масла, посторонних шумов, запотеваний, количества и
+											качества всех технических жидкостей.</p>
+										<p>Проверка двигателя на расход масла.</p>
+										<p>Компьютерная диагностика двигателя автомобиля.</p>
+									</div>
+								</div>
+							</div>
+							<div class="inspection__item swiper-slide">
+								<div class="inspection__item-body">
+									<div class="inspection__item-row">
+										<div class="inspection__item-title">Коробка передач</div>
+										<div class="inspection__item-icon">
+											<img src="img/inspection/transmission.svg" alt="">
+										</div>
+									</div>
+									<div class="inspection__item-textbody">
+										<p>Проверка АКПП и вариатора на предмет рывков при переключении передач и в начале
+											движения.</p>
+										<p>Проверка МКПП на включение и выбивание передач из-за синхронизаторов.</p>
+										<p>Определение степени износа на сцепления и корректную работу актуатора.</p>
+										<p>Компьютерная диагностика исправности коробки передач.</p>
+									</div>
+								</div>
+							</div>
+							<div class="inspection__item swiper-slide">
+								<div class="inspection__item-body">
+									<div class="inspection__item-row">
+										<div class="inspection__item-title">Электроника и оборудование</div>
+										<div class="inspection__item-icon"><img src="img/inspection/electronic.svg" alt=""></div>
+									</div>
+									<div class="inspection__item-textbody">
+										<p>Проверка всех электронных систем (стеклоподъёмники, головной свет, подогревы,
+											аудиосистема,
+											климат-контроль, люк и т.д.).</p>
+										<p>Компьютерная диагностика всей электроники на ошибки.</p>
+									</div>
+								</div>
+							</div>
+							<div class="inspection__item swiper-slide">
+								<div class="inspection__item-body">
+									<div class="inspection__item-row">
+										<div class="inspection__item-title">Компьютерная диагностика</div>
+										<div class="inspection__item-icon"><img src="img/inspection/diagnostic.svg" alt=""></div>
+									</div>
+									<div class="inspection__item-textbody">
+										<p>Проверка всех блоков электронной системы управления, электронных узлов автомобиля,
+											датчиков,
+											индикаторов, модулей.</p>
+										<p>Диагностика с помощью профессионального оборудования даёт точную оценку технического
+											состояния
+											электроники автомобиля и исправности бортовой системы.</p>
+									</div>
+								</div>
+							</div>
+							<div class="inspection__item swiper-slide">
+								<div class="inspection__item-body">
+									<div class="inspection__item-row">
+										<div class="inspection__item-title">Подушки безопасности</div>
+										<div class="inspection__item-icon"><img src="img/inspection/airbag.svg" alt=""></div>
+									</div>
+									<div class="inspection__item-textbody">
+										<p>Проверка корректной работы подушек, ремней безопасности, выявление обманок в руле
+											вместо
+											комплекта подушек.</p>
+										<p>Компьютерная диагностика всей системы безопасности.</p>
+									</div>
+								</div>
+							</div>
+							<!---------------------------------------------------------------------------------->
+							<div class="inspection__item swiper-slide">
+								<div class="inspection__item-body">
+									<div class="inspection__item-row">
+										<div class="inspection__item-title">Подвеска</div>
+										<div class="inspection__item-icon"><img src="img/inspection/suspension.svg" alt=""></div>
+									</div>
+									<div class="inspection__item-textbody">
+										<p>Проверка подвески, рулевого управления, тормозов, гидроусилителя, рычагов, пружин,
+											амортизаторов и других важных узлов на наличие люфта, подтеканий, стуков.</p>
+									</div>
+								</div>
+							</div>
+							<div class="inspection__item swiper-slide">
+								<div class="inspection__item-body">
+									<div class="inspection__item-row">
+										<div class="inspection__item-title">Документы</div>
+										<div class="inspection__item-icon"><img src="img/inspection/servicebook.svg" alt=""></div>
+									</div>
+									<div class="inspection__item-textbody">
+										<p>Проверка на наличие запрета регистрационных действий, угона, любых ограничений,
+											обременений и залогов.</p>
+										<p>Проверка подлинности всех номерных агрегатов, табличек и наклеек.</p>
+										<p>Сверка с документами продавца.</p>
+										<p>Помощь в оформлении сделки.</p>
+									</div>
+								</div>
+							</div>
+							<div class="inspection__item swiper-slide">
+								<div class="inspection__item-body">
+									<div class="inspection__item-row">
+										<div class="inspection__item-title">Пробег</div>
+										<div class="inspection__item-icon"><img src="img/inspection/speedometer.svg" alt=""></div>
+									</div>
+									<div class="inspection__item-textbody">
+										<p>Проверка реального пробега автомобиля.</p>
+									</div>
+								</div>
+							</div>
+							<!---------------------------------------------------------------------------------->
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<div class="inspection__buttons">
+						<div class="inspection__button-up inspection__button">
+							<svg width="64" height="146" viewBox="0 0 64 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect opacity="0.5" x="-0.5" y="-0.5" width="145" height="63" rx="31.5"
+									transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 63 145)" stroke="#8A8A99" />
+								<path d="M32 99L32 47M32 47L24 54.4286M32 47L40 54.4286" stroke="#8A8A99" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+						<div class="inspection__button-down inspection__button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="66" height="148" viewBox="0 0 66 148" fill="none">
+								<rect opacity="0.5" x="65" y="1" width="146" height="64" rx="32" transform="rotate(90 65 1)"
+									stroke="#8A8A99" />
+								<mask id="mask0_194_2330" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+									width="66" height="148">
+									<rect x="65" y="1" width="146" height="64" rx="32" transform="rotate(90 65 1)"
+										stroke="#051326" stroke-width="2" />
+								</mask>
+								<path d="M33 48L33 100M33 100L25 92.5714M33 100L41 92.5714" stroke="#8A8A99" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="services"></div>
 	</div>
-
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 
