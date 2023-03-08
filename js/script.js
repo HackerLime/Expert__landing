@@ -1,3 +1,4 @@
+/*Слайдер SWIPER */
 const mainSwiper = new Swiper('.inspection__slide-container', {
 	direction: 'vertical',
 	effect: 'coverflow',
@@ -21,6 +22,7 @@ const mainSwiper = new Swiper('.inspection__slide-container', {
 	centeredSlides: true,
 	slidesPerView: 1.5,
 });
+/*===========================================*/
 function getSlideNum() {
 	const currentEl = document.querySelector('.swiper-slide-active')
 	const menuLinks = document.querySelectorAll('.inspection__name')
@@ -47,3 +49,40 @@ if (button.length > 0) {
 	}
 	)
 };
+/*========================================================*/
+
+
+
+/*Управление выпадающимися карточками services*/
+const servicesCardBodys = document.querySelectorAll('.services__card-body')
+const servicesIcons = document.querySelectorAll('.services__card-icon')
+const contents = document.querySelectorAll('.services__card-body-content')
+for (i = 0; i < 3; i++) {
+	const servicesIcon = servicesIcons[i]
+	const cardBody = servicesCardBodys[i]
+	const content = contents[i]
+	const heightCl = content.clientHeight
+	servicesIcon.addEventListener('click', function () {
+		servicesIcon.classList.toggle('_active')
+		cardBody.classList.toggle('_active')
+		content.classList.toggle('_active')
+		if (content.classList.contains('_active')) {
+			cardBody.style.cssText = `
+		height:${heightCl + 'px'};
+		transition: height 2s ease 0s;
+		`
+		} else {
+			cardBody.style.cssText = `
+		height:0px;
+		transition: height 2s ease 0s;
+		`
+		}
+	})
+}
+/*==================================================*/
+
+
+
+
+
+
