@@ -1,5 +1,7 @@
+
 /*Слайдер SWIPER */
-const mainSwiper = new Swiper('.inspection__slide-container', {
+
+const inspectionSlider = new Swiper('.inspection__slide-container', {
 	direction: 'vertical',
 	effect: 'coverflow',
 	coverflowEffect: {
@@ -22,7 +24,10 @@ const mainSwiper = new Swiper('.inspection__slide-container', {
 	centeredSlides: true,
 	slidesPerView: 1.5,
 });
+
 /*===========================================*/
+
+
 function getSlideNum() {
 	const currentEl = document.querySelector('.swiper-slide-active')
 	const menuLinks = document.querySelectorAll('.inspection__name')
@@ -49,11 +54,13 @@ if (button.length > 0) {
 	}
 	)
 };
+
 /*========================================================*/
 
 
 
 /*Управление выпадающимися карточками services*/
+
 const servicesCardBodys = document.querySelectorAll('.services__card-body')
 const servicesIcons = document.querySelectorAll('.services__card-icon')
 const contents = document.querySelectorAll('.services__card-body-content')
@@ -79,9 +86,99 @@ for (i = 0; i < 3; i++) {
 		}
 	})
 }
+
+
 /*==================================================*/
 
+/*Navigation of example*/
 
+const slideButtons = document.querySelectorAll('.slider__button')
+for (i = 0; i < slideButtons.length; i++) {
+	const slideButton = slideButtons[i]
+	slideButton.addEventListener('mouseover', function () {
+		slideButton.classList.add('_active')
+		if (slideButton.nextElementSibling) {
+			slideButton.nextElementSibling.classList.add('_active')
+			slideButton.nextElementSibling.childNodes[1].classList.add('_active')
+			slideButton.childNodes[1].classList.add('_active')
+		} else {
+			slideButton.previousElementSibling.classList.add('_active')
+			slideButton.previousElementSibling.childNodes[1].classList.add('_active')
+			slideButton.childNodes[1].classList.add('_active')
+		}
+	})
+}
+
+
+
+/*Swiper-slider */
+
+const exampleSlider = new Swiper('.example__body-slider', {
+	navigation: {
+		nextEl: '.example__slider-right',
+		prevEl: '.example__slider-left',
+	},
+	scrollbar: {
+		el: '.example__slider-scrollbar',
+
+	},
+
+	loop: true,
+	spaceBetween: 30,
+	slidesPerView: 3,
+},
+
+)
+const popupSlider = new Swiper('.popup__slider-container', {
+	loop: true,
+	scrollbar: {
+		el: '.popup__slide-scrollbar',
+	},
+	autoHeight: true,
+	navigation: {
+		prevEl: '.popup__slide-left',
+		nextEl: '.popup__slide-right'
+	}
+})
+//popup settings
+const body = document.querySelector('body')
+const lockPadding = document.querySelectorAll('.lock-padding')
+const popupLinks = document.querySelectorAll('.popup__link')
+if (popupLinks.length > 0) {
+	for (i = 0; i < popupLinks.length; i++) {
+		const popupLink = popupLinks[i]
+		popupLink.addEventListener('click', function (e) {
+			const currentLink = popupLink.getAttribute('href')
+			const currentPopupName = currentLink.replace('#', '')
+			const currentPopup = document.querySelector(`.${currentPopupName}`)
+			const scrollWidth = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+			console.log(scrollWidth)
+			body.classList.add('lock')
+			for (i = 0; i < lockPadding.length; i++) {
+				lockPadding[i].style.paddingRight = scrollWidth
+			}
+			console.log(scrollWidth)
+			currentPopup.classList.add('open')
+			e.preventDefault();
+		})
+	}
+}
+
+const popupCloseIcons = document.querySelectorAll('.popup-close');
+if (popupCloseIcons.length > 0) {
+	for (let i = 0; i < popupCloseIcons.length; i++) {
+		const popupCloseIcon = popupCloseIcons[i];
+		const activePopup = popupCloseIcon.closest('.popup')
+		popupCloseIcon.addEventListener('click', function (e) {
+			body.classList.remove('lock')
+			for (i = 0; i < lockPadding.length; i++) {
+				lockPadding[i].style.paddingRight = '0px'
+			}
+			activePopup.classList.remove('open')
+			e.preventDefault()
+		})
+	}
+}
 
 
 
