@@ -179,7 +179,32 @@ if (popupCloseIcons.length > 0) {
 		})
 	}
 }
+//===================
+//question animation
 
-
-
-
+const questionBtns = document.querySelectorAll('.question__item-icon')
+for (i = 0; i < questionBtns.length; i++) {
+	const questionBtn = questionBtns[i]
+	const closestItem = questionBtn.closest('.question__item')
+	const hiddenText = closestItem.querySelector('p')
+	questionBtn.addEventListener('click', function () {
+		questionBtn.classList.toggle('_active')
+		if (hiddenText) {
+			function showHidden() {
+				hiddenText.classList.toggle('_active')
+			}
+			const closestItemHeight = closestItem.offsetHeight
+			if (questionBtn.classList.contains('_active')) {
+				closestItem.style.height =
+					closestItemHeight + hiddenText.scrollHeight + 'px'
+				setTimeout(function showHidden() {
+					hiddenText.classList.toggle('_active')
+				}, 800)
+			} else {
+				closestItem.style.height = ''
+				showHidden()
+			}
+		}
+	})
+}
+//================================

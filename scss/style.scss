@@ -30,6 +30,7 @@ body.lock{
 	max-width: 1424px;
 	margin: 0px auto;
 	min-width:0;
+	padding: 0px 15px;
 }
 .first {
 	padding: 27.5px 0 39px 0;
@@ -1134,7 +1135,140 @@ max-width: 234px;
 .swiper-scrollbar-drag{
 	background-color: #FF1616;
 }
+/*=====================*/
+/*--------------------*/
+.just {
+	background: #051326;
+	&__container{
+		background: url('../img/just/vec__message.svg') 57% 55% no-repeat;
+	}
+	&__content {
+		padding: 120px 0 156px 0;
 
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 126px 0;
+	}
+	&__row:last-child{
+		margin: 0;
+		justify-content: start;
+	}
+
+	&__column {
+	}
+	&__column:first-child {
+		max-width: 785px;
+	}
+
+	&__title {
+		font-family: 'Akzidenz-Grotesk Pro';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 130%;
+		text-transform: uppercase;
+		color: #F7F7F8;
+		margin: 0 0 64px 0;
+	}
+	&__title span{
+		color: #FF1616;
+	}
+
+	&__subtitle {
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 140%;
+		color: #8A8A99;
+	}
+
+	&__icon {
+	}
+
+	&__social {
+		background-color: #F7F7F8;
+		padding: 64px 48px;
+		border-radius: 48px;
+		margin: 0 108.54px 0 0;
+		flex: 0 1 741px;
+		position: relative;
+		z-index: 2;
+	}
+
+
+
+	&__social-content {
+		display: flex;
+	
+	}
+	
+
+	&__social-item {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	margin: 0 60px 0 0;
+	}
+	&__social-item:last-child{
+		margin: 0;
+	}
+	
+	
+
+	&__social-item-icon {
+		margin: 0 24px 0 0;
+	}
+	&__social-item-icon img{
+		min-width: 100%;
+	}
+
+	&__social-item-name {
+		font-family: 'Mulish';
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 120%;
+		color: #FF1616;
+	}
+
+	&__numbers {
+		display: flex;
+		align-items: center;
+	}
+
+	&__numbers-content {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__numbers-item {
+		display: flex;
+		flex: 0 0 auto;
+		margin: 0 50px 0 0;
+	}
+	&__numbers-item:last-child{
+		margin: 0;
+	}
+
+	&__numbers-icon {
+		margin: 0 32.46px 0 0;
+		
+	}
+
+	&__numbers-name {
+		font-family: 'Mulish';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 120%;
+		color: #F7F7F8;
+		max-width: 250px;
+	}
+}
+
+
+/*popup styles*/
 .popup.open{
 	opacity: 1;
 	visibility: visible;
@@ -1270,7 +1404,6 @@ max-width: 234px;
 	&__detalinspect-text span{
 		color: #FF1616;
 	}
-//======================
 	&__slider-container{
 		margin: 0 0 48px 0;
 	}
@@ -1293,7 +1426,7 @@ max-width: 234px;
 		color: #8A8A99;
 	}
 
-//===================
+
 	&__slide-buttons {
 		margin: 0 0 80px 0;
 	}
@@ -1423,7 +1556,188 @@ max-width: 234px;
 	}
 	
 }
+//=======================
+.question {
+	padding: 120px 0 140px 0;
+	background-color: #EEEFF0;
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 120px 0;
+	}
 
+	&__head-titlebody {
+	}
+
+	&__head-title {
+		font-family: 'Akzidenz-Grotesk Pro';
+		font-weight: 500;
+		font-size: 48px;
+		line-height: 130%;
+		text-transform: uppercase;
+		color: #051326;
+		margin: 0 0 65px 0;
+		position: relative;
+		max-width: 642px;
+	}
+	&__head-title::after{
+		position: absolute;
+		content: '';
+		background: url('../img/question/question.svg') 0 0 no-repeat;
+		top: -70%;
+		left: 102%;
+		width: 118px;
+		height: 108px;
+	}
+	&__head-title span{
+		color: #FF1616;
+		position: relative;
+	}
+
+	&__head-subtitle {
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 140%;
+		color: #8A8A99;
+		max-width: 697px;
+	}
+	&__head-subtitle span{
+		text-decoration: underline;
+		color: #051326;
+		font-weight: 600;
+	}
+
+	&__head-redtext {
+		font-family: 'Akzidenz-Grotesk Pro';
+		font-size: 18px;
+		line-height: 140%;
+		color: #FF1616;
+		min-width: 177px;
+	}
+	
+
+	&__body {
+	}
+	&__columns {
+		display: flex;
+		justify-content: space-between;
+		margin: 0px -15px;
+	}
+	&__column {
+		flex: 0 1 50%;
+		padding: 0 15px;
+	}
+	&__item {
+		border: 1px solid #CACAD0;
+		border-radius: 32px;
+		padding: 48px 32px 0 32px;
+		background-color: #F7F7F8;
+		height: 154px;
+		max-width: 697px;
+		margin: 0 0 30px 0;
+		position: relative;
+		transition: height 1s ease 0s;
+	}
+	
+	
+	&__item-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex: 1 1 auto;
+	}
+	&__item p{
+		position: absolute;
+		max-width: 540px;
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 140%;
+		color: #8A8A99;
+		bottom: 10%;
+		visibility: hidden;
+		opacity: 0;
+	}
+	&__item p._active{
+		visibility: visible;
+		opacity: 1;
+		transition: all 0.5s ease 0s;
+		bottom: 10%;
+	}
+	
+	&__item-question {
+		font-family: 'Mulish';
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 120%;
+		color: #051326;
+		max-width: 537px;
+	}
+	&__item-icon {
+		width: 48px;
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #EEEFF0;
+		border-radius: 9.10247px;
+		flex-grow: 0;
+		flex-shrink: 0;
+		cursor: pointer;
+		transition:all 0.5s ease 0s;
+	}
+	&__item-icon svg{
+		transition:all 0.5s ease 0s;
+	}
+	&__item-icon._active svg{
+		transform: rotate(180deg);
+	}
+	&__item-icon:hover{
+		background: #051326;
+	}
+	&__item-icon:hover svg path{
+		fill: #F7F7F8;
+		transition: all 0.5s ease 0s;
+	}
+	&__item-icon._active svg path:first-child{
+		fill: transparent;
+	}
+	&__body-column {
+	}
+}
+
+.afquestion {
+	background-color:#051326;
+	&__content{
+	display: flex;
+	justify-content: space-between;
+	padding: 24px 0 24px 24px;
+	}
+	&__item {
+		font-family: 'Akzidenz-Grotesk Pro';
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #F7F7F8;
+		position: relative;	
+	}
+	&__item::before{
+		content: '';
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: #F7F7F8;
+		top: 12px;
+		left: -24px;
+	}
+}
+
+
+
+
+//========================
+/*slider-buttons*/
 .slider{
 	&__buttons {
 		display: flex;
@@ -1528,7 +1842,7 @@ max-width: 234px;
 		transform: rotate(45deg) translateX(-2px);
 		
 	}
-	//=======================
+	
 	&__button-right{
 		width: 146px;
 		background: #FF1616;
