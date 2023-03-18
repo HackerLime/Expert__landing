@@ -95,7 +95,7 @@ for (i = 0; i < 3; i++) {
 const slideButtons = document.querySelectorAll('.slider__button')
 for (i = 0; i < slideButtons.length; i++) {
 	const slideButton = slideButtons[i]
-	slideButton.addEventListener('mouseover', function () {
+	function addSlideButtonActive() {
 		slideButton.classList.add('_active')
 		if (slideButton.nextElementSibling) {
 			slideButton.nextElementSibling.classList.add('_active')
@@ -106,7 +106,24 @@ for (i = 0; i < slideButtons.length; i++) {
 			slideButton.previousElementSibling.childNodes[1].classList.add('_active')
 			slideButton.childNodes[1].classList.add('_active')
 		}
-	})
+	}
+	function removeSlideButtonActive() {
+		slideButton.classList.remove('_active')
+		if (slideButton.nextElementSibling) {
+			slideButton.nextElementSibling.classList.remove('_active')
+			slideButton.nextElementSibling.childNodes[1].classList.remove('_active')
+			slideButton.childNodes[1].classList.remove('_active')
+		} else {
+			slideButton.previousElementSibling.classList.remove('_active')
+			slideButton.previousElementSibling.childNodes[1].classList.remove('_active')
+			slideButton.childNodes[1].classList.remove('_active')
+		}
+	}
+	function shortRemoveActive() {
+		setTimeout(removeSlideButtonActive, 1000)
+	}
+	slideButton.addEventListener('mouseenter', addSlideButtonActive)
+	slideButton.addEventListener('mouseleave', shortRemoveActive)
 }
 
 
@@ -208,3 +225,15 @@ for (i = 0; i < questionBtns.length; i++) {
 	})
 }
 //================================
+const reviewSlide = new Swiper('.review__slider', {
+	loop: true,
+	slidesPerView: 3,
+	navigation: {
+		nextEl: '.review__slider-right',
+		prevEl: '.review__slider-left'
+	},
+	spaceBetween: 30,
+	scrollbar: {
+		el: '.review__slider-scrollbar'
+	}
+})
