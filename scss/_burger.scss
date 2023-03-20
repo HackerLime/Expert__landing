@@ -1,0 +1,147 @@
+.burger._active{
+	opacity: 1;
+	visibility: visible;
+	top: 0;
+	z-index: 40;
+}
+.burger {
+position: fixed;
+height: 100%;
+width: 100%;
+top: -100%;
+left: 0;
+background: url('../img/burgerBG.jpg') 0 0 no-repeat;
+overflow-y:auto;
+overflow-x: hidden;
+opacity: 0;
+visibility: hidden;
+transition: all 0.5s ease 0s;
+	&__contents-body{
+		min-height: 100%;
+		padding: 0 15px;
+		max-width: 1424px;
+		margin: 0px auto;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	&__content {
+		padding: 210px 0 0 0;
+	}
+
+	&__columns {
+		margin: 0 0 130px 0;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__column {
+		display: flex;
+	}
+	&__columns-column:first-child {
+		margin: 0 160px 0 0;
+	}
+	&__menulist li a{
+		text-decoration: none;
+		font-family: 'Montserrat';
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 49px;
+		color: #F7F7F8;
+	}
+	&__menulist li{
+		margin: 0 0 39px 0;
+	}
+	&__menulist li:last-child{
+		margin: 0;
+	}
+	&__menulist li:first-child a{
+		color:#BA1204;
+	}
+	&__list {
+		margin: 0 0 38.5px 0;
+	}
+	&__list:last-child{
+		margin: 0px;
+	}
+	&__list li {
+		margin: 0 0 19px 0;
+		font-family: 'Mulish';
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 120%;
+	}
+	&__list li:first-child{
+		margin: 0 0 47.5px 0;
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 49px;
+	}
+	&__list li:last-child{
+		margin: 0;
+	}
+	&__list li a{
+		text-decoration: none;
+		color: #F7F7F8;;
+	}
+	&__form-content {
+		max-width: 320px;
+	}
+
+	&__form-title {
+		font-family: 'Montserrat';
+		font-size: 18px;
+		line-height: 24px;
+		color: #FFFFFF;
+		margin: 0 0 32px 0;
+	}
+
+	&__form-inputs {
+		margin: 0 0 16px 0;
+	}
+
+	&__form-input {
+		padding: 21px 0 21px 24px;
+		background: #EEEFF0;
+		border: 1px solid #CACAD0;
+		border-radius: 32px;
+	}
+	&__form-input input{
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 130%;
+	}
+	&__form-input input::placeholder{
+		color: #8A8A99;
+	}
+	&__form-input input:focus::placeholder{
+		opacity: 0;
+	}
+	&__form-input:first-child{
+		margin: 0 0 8px 0;
+	}
+
+	&__form-sublabel {
+		font-family: 'Montserrat';
+		font-size: 14px;
+		line-height: 130%;
+		color: #969CA4;
+		margin: 0 0 12px 0;
+	}
+	&__form-sublabel a{
+		text-decoration: underline;
+		color: #969CA4;
+	}
+
+	&__form-btn {
+		font-family: 'Mulish';
+		padding: 21px 0;
+		background-color: #BA1204;
+		text-align: center;
+		font-weight: 500;
+		font-size: 17px;
+		line-height: 130%;
+		color: #F7F7F8;
+		border-radius: 32px;
+	}
+}

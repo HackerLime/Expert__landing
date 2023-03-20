@@ -1,0 +1,44 @@
+.slide {
+	&__item-btn:visited{
+		background-color: transparent;
+	}
+	&__item-btn:visited .slide__item-btn-arrow svg path{
+	stroke: #8A8A99;
+	}
+	&__item-btn:visited .slide__item-btn-name{
+	color: #8A8A99;
+	}
+	&__item-btn:visited{
+		border: #8A8A99 1px solid;
+		}
+&__item-btn {
+	border: #FF1616 1px solid;
+	display: inline-flex;
+	border-radius: 32px;
+	align-items: center;
+	padding: 16px 32px;
+}
+&__item-btn:hover{
+	background-color: #F7F7F8;
+}
+&__item-btn:active{
+	background-color: #FF1616;
+	border: 1px solid transparent;
+}
+&__item-btn:active .slide__item-btn-arrow svg path{
+stroke: #F7F7F8;
+}
+&__item-btn:active .slide__item-btn-name{
+color: #F7F7F8;
+}
+
+&__item-btn-name {
+	user-select: none;
+	font-family: 'Mulish';
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 130%;
+	color: #FF1616;
+	margin: 0 12px 0 0;
+}
+}

@@ -1,0 +1,115 @@
+.footer {
+	background: #EEEFF0;
+	padding: 120px 0;
+
+	&__columns {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 152px 0;
+	}
+
+	&__column {
+		padding: 16px 0 0 0;
+	}
+	&__column:first-child{
+		padding: 0;
+	}
+	&__list li a{
+		font-family: 'Mulish';
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 120%;
+		text-decoration: none;
+	}
+	&__list li{
+		margin: 0 0 32px 0;
+	}
+
+	&__list li:last-child{
+		margin: 0;
+	}
+	&__logo {
+		margin: 0 0 48px 0;
+	}
+
+	&__text {
+		font-family: 'Mulish';
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 120%;
+		text-decoration: none;
+		color: #051326;
+		max-width: 393px;
+		margin: 0 0 48px 0;
+		
+	}
+
+	&__icons {
+		display: flex;
+		justify-content: space-between;
+		max-width: 240px;
+	}
+	&__menulist li a {
+		color: #051326	;		
+	}
+
+	&__list-auto li a {
+		color: #8A8A99
+	}
+	&__list-auto li:first-child a{
+		color: #051326
+	}
+
+	&__list-moto li a {
+		color: #8A8A99
+	}
+	&__list-moto li:first-child a{
+		color: #051326
+	}
+
+	&__row {
+		display: flex;
+	}
+
+	&__expert-privacy {
+		display: flex;
+		max-width: 478px;
+		align-items: center;
+		margin: 0 128px 0 0;
+		min-width:478px ;
+	}
+	&__expert-privacy a{
+		text-decoration: none;
+		font-family: 'Mulish';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 140%;
+		color: #8A8A99;
+	}
+
+	&__expert {
+		margin: 0 40px 0 0;
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 140%;
+		color: #8A8A99;
+	}
+	&__numbers {
+		display: flex;
+		max-width: 818px;
+		justify-content: space-between;
+	}
+	&__numbers li a{
+		text-decoration: none;
+		font-family: 'Mulish';
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 120%;
+		color: #FF1616;
+	}
+	&__numbers li{
+		margin: 0 113px 0 0;
+		min-width: 200px ;
+	}
+}
