@@ -1,0 +1,105 @@
+.how {
+	background: #F7F7F8;
+	padding: 140px 0 160px 0;
+	&__head {
+		margin: 0 0 120px;
+	}
+
+	&__head-row {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 64px 0;
+	}
+
+	&__head-title {
+		font-family: 'Akzidenz-Grotesk Pro';
+		font-weight: 500;
+		font-size: 48px;
+		line-height: 130%;
+		text-transform: uppercase;
+		color: #051326;
+		position: relative;
+	}
+	&__head-title p::after{
+		position: absolute;
+		content: '';
+		width: 300px;
+		height: 96px;
+		background: url('../img/how/ribbon.svg') 0 0 no-repeat ;
+		top: -20px;
+		left: 90%;
+	
+	}
+
+	&__head-easytext {
+		font-family: 'Akzidenz-Grotesk Pro';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 140%;
+		color: #FF1616;
+	}
+
+	&__head-subtitle {
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 140%;
+		color: #8A8A99;
+		max-width: 817px;
+
+	}
+
+
+	&__body {
+		position: relative;
+	}
+	&__body-rows {
+	display: flex;
+	flex-direction: column;
+	background: url('../img/how/rect_up.svg') 30px 45px no-repeat,url('../img/how/rect_down.svg') 0px 379px no-repeat;
+	
+	}
+	
+	&__body-row {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 169px 0;
+	}
+	&__body-row:last-child{
+		margin: 0;
+	}
+
+	&__card {
+		max-width: 340px;
+		margin: 0 200px 0 0;
+	}
+	&__card:last-child{
+		margin: 0;
+	}
+	&__card-icon {
+		margin: 0 0 40px 0;
+	}
+	&__card-title {
+		font-family: 'Mulish';
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 120%;
+		color: #051326;
+		margin: 0 0 16px 0;
+	}
+	&__card-subtitle {
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 140%;
+		color: #8A8A99;
+	}
+	&__footer{
+		padding: 120px 0 160px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__footer-image{
+		min-width: 100%;
+	}
+}

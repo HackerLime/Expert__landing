@@ -1,5 +1,5 @@
 
-/*Слайдер SWIPER */
+/*Swiper Inspection-slider */
 
 const inspectionSlider = new Swiper('.inspection__slide-container', {
 	direction: 'vertical',
@@ -25,9 +25,110 @@ const inspectionSlider = new Swiper('.inspection__slide-container', {
 	slidesPerView: 1.5,
 });
 
+
+/*Swiper Example-slider */
+
+const exampleSlider = new Swiper('.example__body-slider', {
+	navigation: {
+		nextEl: '.example__slider-right',
+		prevEl: '.example__slider-left',
+	},
+	scrollbar: {
+		el: '.example__slider-scrollbar',
+
+	},
+
+	loop: true,
+	spaceBetween: 30,
+	slidesPerView: 3,
+},
+
+)
+/*Swiper Popup-slider*/
+const popupSlider = new Swiper('.popup__slider-container', {
+	loop: true,
+	scrollbar: {
+		el: '.popup__slide-scrollbar',
+	},
+	autoHeight: true,
+	navigation: {
+		prevEl: '.popup__slide-left',
+		nextEl: '.popup__slide-right'
+	}
+})
 /*===========================================*/
+const reviewSlide = new Swiper('.review__slider', {
+	loop: true,
+	slidesPerView: 3,
+	navigation: {
+		nextEl: '.review__slider-right',
+		prevEl: '.review__slider-left'
+	},
+	spaceBetween: 30,
+	scrollbar: {
+		el: '.review__slider-scrollbar'
+	}
+})
+const burgerBtn = document.querySelector('.header__burger-icon')
+const menuBurger = document.querySelector('.burger')
+const wrp = document.querySelector('.wrapper')
+const header = document.querySelector('.header')
+burgerBtn.addEventListener('click', function () {
+	burgerBtn.classList.toggle('_active')
+	if (burgerBtn.classList.contains('_active')) {
+		const scrollWidth = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+		menuBurger.classList.add('_active')
+		body.classList.add('lock')
+		for (i = 0; i < lockPadding.length; i++) {
+			lockPadding[i].style.paddingRight = scrollWidth
+		}
 
+	} else {
+		menuBurger.classList.remove('_active')
+		body.classList.remove('lock')
+		for (i = 0; i < lockPadding.length; i++) {
+			lockPadding[i].style.paddingRight = '0px'
+		}
+	}
+})
+/*Navigation of Swiper*/
 
+const slideButtons = document.querySelectorAll('.slider__button')
+for (i = 0; i < slideButtons.length; i++) {
+	const slideButton = slideButtons[i]
+	function addSlideButtonActive() {
+		slideButton.classList.add('_active')
+		if (slideButton.nextElementSibling) {
+			slideButton.nextElementSibling.classList.add('_active')
+			slideButton.nextElementSibling.childNodes[1].classList.add('_active')
+			slideButton.childNodes[1].classList.add('_active')
+		} else {
+			slideButton.previousElementSibling.classList.add('_active')
+			slideButton.previousElementSibling.childNodes[1].classList.add('_active')
+			slideButton.childNodes[1].classList.add('_active')
+		}
+	}
+	function removeSlideButtonActive() {
+		slideButton.classList.remove('_active')
+		if (slideButton.nextElementSibling) {
+			slideButton.nextElementSibling.classList.remove('_active')
+			slideButton.nextElementSibling.childNodes[1].classList.remove('_active')
+			slideButton.childNodes[1].classList.remove('_active')
+		} else {
+			slideButton.previousElementSibling.classList.remove('_active')
+			slideButton.previousElementSibling.childNodes[1].classList.remove('_active')
+			slideButton.childNodes[1].classList.remove('_active')
+		}
+	}
+	function shortRemoveActive() {
+		setTimeout(removeSlideButtonActive, 1000)
+	}
+	slideButton.addEventListener('mouseenter', addSlideButtonActive)
+	slideButton.addEventListener('mouseleave', shortRemoveActive)
+}
+/*=======================================================*/
+
+/* Код ниже работает с InspectionSwiper,добовляет стили к списку слева от слайдера */
 function getSlideNum() {
 	const currentEl = document.querySelector('.swiper-slide-active')
 	const menuLinks = document.querySelectorAll('.inspection__name')
@@ -90,73 +191,10 @@ for (i = 0; i < 3; i++) {
 
 /*==================================================*/
 
-/*Navigation of example*/
-
-const slideButtons = document.querySelectorAll('.slider__button')
-for (i = 0; i < slideButtons.length; i++) {
-	const slideButton = slideButtons[i]
-	function addSlideButtonActive() {
-		slideButton.classList.add('_active')
-		if (slideButton.nextElementSibling) {
-			slideButton.nextElementSibling.classList.add('_active')
-			slideButton.nextElementSibling.childNodes[1].classList.add('_active')
-			slideButton.childNodes[1].classList.add('_active')
-		} else {
-			slideButton.previousElementSibling.classList.add('_active')
-			slideButton.previousElementSibling.childNodes[1].classList.add('_active')
-			slideButton.childNodes[1].classList.add('_active')
-		}
-	}
-	function removeSlideButtonActive() {
-		slideButton.classList.remove('_active')
-		if (slideButton.nextElementSibling) {
-			slideButton.nextElementSibling.classList.remove('_active')
-			slideButton.nextElementSibling.childNodes[1].classList.remove('_active')
-			slideButton.childNodes[1].classList.remove('_active')
-		} else {
-			slideButton.previousElementSibling.classList.remove('_active')
-			slideButton.previousElementSibling.childNodes[1].classList.remove('_active')
-			slideButton.childNodes[1].classList.remove('_active')
-		}
-	}
-	function shortRemoveActive() {
-		setTimeout(removeSlideButtonActive, 1000)
-	}
-	slideButton.addEventListener('mouseenter', addSlideButtonActive)
-	slideButton.addEventListener('mouseleave', shortRemoveActive)
-}
 
 
 
-/*Swiper-slider */
 
-const exampleSlider = new Swiper('.example__body-slider', {
-	navigation: {
-		nextEl: '.example__slider-right',
-		prevEl: '.example__slider-left',
-	},
-	scrollbar: {
-		el: '.example__slider-scrollbar',
-
-	},
-
-	loop: true,
-	spaceBetween: 30,
-	slidesPerView: 3,
-},
-
-)
-const popupSlider = new Swiper('.popup__slider-container', {
-	loop: true,
-	scrollbar: {
-		el: '.popup__slide-scrollbar',
-	},
-	autoHeight: true,
-	navigation: {
-		prevEl: '.popup__slide-left',
-		nextEl: '.popup__slide-right'
-	}
-})
 //popup settings
 const body = document.querySelector('body')
 const lockPadding = document.querySelectorAll('.lock-padding')
@@ -196,8 +234,8 @@ if (popupCloseIcons.length > 0) {
 		})
 	}
 }
-//===================
-//question animation
+/*============*/
+/* Анимация в блоке Question*/
 
 const questionBtns = document.querySelectorAll('.question__item-icon')
 for (i = 0; i < questionBtns.length; i++) {
@@ -225,15 +263,3 @@ for (i = 0; i < questionBtns.length; i++) {
 	})
 }
 //================================
-const reviewSlide = new Swiper('.review__slider', {
-	loop: true,
-	slidesPerView: 3,
-	navigation: {
-		nextEl: '.review__slider-right',
-		prevEl: '.review__slider-left'
-	},
-	spaceBetween: 30,
-	scrollbar: {
-		el: '.review__slider-scrollbar'
-	}
-})

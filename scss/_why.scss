@@ -1,0 +1,123 @@
+.why {
+	padding: 148px 0 178px 0;
+	background-color: #F7F7F8;
+
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 64px 0;
+	}
+
+	&__title {
+		flex: 0 1 auto;
+		position:relative;
+		font-family: 'Akzidenz-Grotesk Pro';
+		font-weight: 500;
+		font-size: 48px;
+		line-height: 130%;
+		color: #051326;
+		text-transform: uppercase;
+	}
+	&__title span::after{
+		content: '';
+		position: absolute;
+		width: 54px;
+		height: 52px;
+		background: url('../img/why/choseusUnion.svg');
+		bottom: 32px;
+		margin-left: -20px;
+	}
+	&__title-red{
+		color: #FF1616;
+	}
+	&__subtitle {
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 140%;
+		color: #8A8A99;
+		margin: 0 0 64px 0;
+	}
+	&__calmness {
+		font-family: 'Akzidenz-Grotesk Pro';
+		font-size: 18px;
+		line-height: 140%;
+		color: #FF1616;
+	}
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__pic {
+		background: url('../img/why/meter.svg') no-repeat;
+		height:507px ;
+		width: 497px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__pic-text{}
+	&__pic-text-title{
+		font-family: 'Akzidenz-Grotesk Pro';
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 46px;
+		text-align: center;
+		color: #051326;
+		margin: 0 0 8px 0;
+	}
+	&__pic-text-subtitle{
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 140%;
+		text-align: center;
+		color: #8A8A99;
+		opacity: 0.8;
+		max-width: 325px;
+	}
+
+	&__items {
+		display: flex;
+		align-items: center;
+	
+	}
+	&__items-column{
+		flex: 0 1 50%;
+		
+		
+	}
+	&__items-column:last-child{
+		margin: 0;
+	}
+
+	&__item {
+		border-left: 2px #FF1616 solid;
+		margin: 0 0 48px 0;
+		padding-left:32px ;
+		max-width: 318px;
+		height: 120px;
+		
+	}
+	&__item:last-child{
+		margin: 0;
+	}
+
+	&__item-title {
+		font-family: 'Akzidenz-Grotesk Pro';
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 130%;
+		text-transform: uppercase;
+		color: #051326;
+		margin: 0 0 8px 0;
+	}
+
+	&__item-text {
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 140%;
+		color: #8A8A99;
+		opacity: 0.8;
+		flex: 0 0 286px;
+	}
+
+}

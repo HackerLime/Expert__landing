@@ -1,0 +1,123 @@
+.just {
+	background: #051326;
+	&__container{
+		background: url('../img/just/vec__message.svg') 57% 55% no-repeat;
+	}
+	&__content {
+		padding: 120px 0 156px 0;
+
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 126px 0;
+	}
+	&__row:last-child{
+		margin: 0;
+		justify-content: start;
+	}
+
+	&__column:first-child {
+		max-width: 785px;
+	}
+
+	&__title {
+		font-family: 'Akzidenz-Grotesk Pro';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 130%;
+		text-transform: uppercase;
+		color: #F7F7F8;
+		margin: 0 0 64px 0;
+	}
+	&__title span{
+		color: #FF1616;
+	}
+
+	&__subtitle {
+		font-family: 'Mulish';
+		font-size: 17px;
+		line-height: 140%;
+		color: #8A8A99;
+	}
+	&__social {
+		background-color: #F7F7F8;
+		padding: 64px 48px;
+		border-radius: 48px;
+		margin: 0 108.54px 0 0;
+		flex: 0 1 741px;
+		position: relative;
+		z-index: 2;
+	}
+
+
+
+	&__social-content {
+		display: flex;
+	
+	}
+	
+
+	&__social-item {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	margin: 0 60px 0 0;
+	}
+	&__social-item:last-child{
+		margin: 0;
+	}
+	
+	
+
+	&__social-item-icon {
+		margin: 0 24px 0 0;
+	}
+	&__social-item-icon img{
+		min-width: 100%;
+	}
+
+	&__social-item-name {
+		font-family: 'Mulish';
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 120%;
+		color: #FF1616;
+	}
+
+	&__numbers {
+		display: flex;
+		align-items: center;
+	}
+
+	&__numbers-content {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__numbers-item {
+		display: flex;
+		flex: 0 0 auto;
+		margin: 0 50px 0 0;
+	}
+	&__numbers-item:last-child{
+		margin: 0;
+	}
+
+	&__numbers-icon {
+		margin: 0 32.46px 0 0;
+		
+	}
+
+	&__numbers-name {
+		font-family: 'Mulish';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 120%;
+		color: #F7F7F8;
+		max-width: 250px;
+	}
+}
